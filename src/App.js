@@ -31,7 +31,16 @@ function App() {
 
       <ul>
         {list.map(function (item) {
-            return <li key={item.objectID}>{item.title}</li>;
+            return (
+              <li key={item.objectID}>
+                <span>
+                  <a href={item.url}>{item.title}</a>
+                </span> &bull;
+                <span>{item.author}</span> &bull;
+                <span>{item.num_comments}</span> &bull;
+                <span>{item.points}</span>
+              </li>
+            );
           })}
       </ul>
     </div>
