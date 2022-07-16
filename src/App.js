@@ -30,8 +30,9 @@ function App() {
       <hr />
 
       <ul>
-        {list.map(function (item) {
-            return <li>{item.title}</li>;
+        {list.map(function (item, index) {
+            {/* Only use an index as last resort */}
+            return <li key={index}>{item.title}</li>;
           })}
       </ul>
     </div>
