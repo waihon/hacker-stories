@@ -47,7 +47,7 @@ const frameworkList = [
 ]
 
 // Declaration of App component
-function App() {
+const App = () => {
   return (
     <div>
       <h1>My Hacker Stories</h1>
@@ -63,10 +63,10 @@ function App() {
       <List list={frameworkList} />
     </div>
   );
-}
+};
 
 // Declaration of List component
-function List({ list }) {
+const List = ({ list }) => {
   return (
     <ul>
       {list.map(function (item) {
@@ -76,9 +76,9 @@ function List({ list }) {
       })}
     </ul>
   );
-}
+};
 
-function Item({ item }) {
+const Item = ({ item }) => {
   return (
     <li key={item.objectID}>
       <span>
@@ -89,6 +89,6 @@ function Item({ item }) {
       <span>{item.points}</span>
     </li>
   );
-}
+};
 
 export default App;
