@@ -31,15 +31,15 @@ function App() {
       <hr />
 
       {/* Creating an instance of List component */}
-      <List />
+      <List list={list} />
       {/* Creating another instance of List component */}
-      <List />
+      <List list={list} />
     </div>
   );
 }
 
 // Declaration of List component
-function List() {
+function List({ list }) {
   return (
     <ul>
       {list.map(function (item) {
