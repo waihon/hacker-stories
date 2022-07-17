@@ -47,48 +47,43 @@ const frameworkList = [
 ]
 
 // Declaration of App component
-const App = () => {
-  return (
-    <div>
-      <h1>My Hacker Stories</h1>
+const App = () => (
+  <div>
+    <h1>My Hacker Stories</h1>
 
-      <label htmlFor="search">Search: </label>
-      <input id="search" type="text" />
+    <label htmlFor="search">Search: </label>
+    <input id="search" type="text" />
 
-      <hr />
+    <hr />
 
-      {/* Creating an instance of List component */}
-      <List list={reactList} />
-      {/* Creating another instance of List component */}
-      <List list={frameworkList} />
-    </div>
-  );
-};
+    {/* Creating an instance of List component */}
+    <List list={reactList} />
+
+    {/* Creating another instance of List component */}
+    <List list={frameworkList} />
+  </div>
+);
 
 // Declaration of List component
-const List = ({ list }) => {
-  return (
-    <ul>
-      {list.map((item) => {
-        return (
-          <Item item={item} />
-        );
-      })}
-    </ul>
-  );
-};
+const List = ({ list }) => (
+  <ul>
+    {list.map((item) => {
+      return (
+        <Item item={item} />
+      );
+    })}
+  </ul>
+);
 
-const Item = ({ item }) => {
-  return (
-    <li key={item.objectID}>
-      <span>
-        <a href={item.url}>{item.title}</a>
-      </span> &bull;
-      <span>{item.author}</span> &bull;
-      <span>{item.num_comments}</span> &bull;
-      <span>{item.points}</span>
-    </li>
-  );
-};
+const Item = ({ item }) => (
+  <li key={item.objectID}>
+    <span>
+      <a href={item.url}>{item.title}</a>
+    </span> &bull;
+    <span>{item.author}</span> &bull;
+    <span>{item.num_comments}</span> &bull;
+    <span>{item.points}</span>
+  </li>
+);
 
 export default App;
