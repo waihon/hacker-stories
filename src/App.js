@@ -69,7 +69,7 @@ const App = () => {
 const List = ({ list }) => {
   return (
     <ul>
-      {list.map(function (item) {
+      {list.map((item) => {
         return (
           <Item item={item} />
         );
