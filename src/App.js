@@ -71,10 +71,15 @@ const Search = () => {
     console.log(event.target.value)
   };
 
+  const handleBlur = (event) => {
+    console.log("The element loses focus");
+    console.log(event.target.value);
+  }
+
   return (
     <div>
       <label htmlFor="search">Search: </label>
-      <input id="search" type="text" onChange={handleChange} />
+      <input id="search" type="text" onChange={handleChange} onBlur={handleBlur} />
     </div>
   );
 };
