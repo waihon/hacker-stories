@@ -19,6 +19,7 @@ const list = [
   },
 ]
 
+// Declaration of App component
 function App() {
   return (
     <div>
@@ -29,12 +30,15 @@ function App() {
 
       <hr />
 
+      {/* Creating an instance of List component */}
       <List />
-
+      {/* Creating another instance of List component */}
+      <List />
     </div>
   );
 }
 
+// Declaration of List component
 function List() {
   return (
     <ul>
