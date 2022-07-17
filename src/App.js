@@ -67,11 +67,9 @@ const App = () => (
 // Declaration of List component
 const List = ({ list }) => (
   <ul>
-    {list.map((item) => {
-      return (
-        <Item item={item} />
-      );
-    })}
+    {list.map((item) => (
+      <Item item={item} />
+    ))}
   </ul>
 );
 
